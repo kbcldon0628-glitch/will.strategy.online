@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -15,19 +14,11 @@ export default function LegalPage() {
           特定商取引法に基づく表記
         </h1>
 
+        {/* 後日画像を載せる場合は public/images/ に配置して Image を追加 */}
         <div
-          className="bg-card rounded-lg border border-border overflow-hidden"
+          className="bg-card rounded-lg border border-border min-h-[480px]"
           data-nosnippet="true"
-        >
-          <Image
-            src="/images/legal-tokusho.png"
-            alt="特定商取引法に基づく表記"
-            width={1200}
-            height={1600}
-            className="w-full h-auto"
-            priority
-          />
-        </div>
+        />
 
         <p className="text-xs text-muted-foreground text-center mt-6">
           ※ 本表記の内容についてのお問い合わせは公式LINEよりお願いいたします。
