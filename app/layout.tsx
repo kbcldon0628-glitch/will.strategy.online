@@ -3,14 +3,19 @@ import { Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansJP = Noto_Sans_JP({ 
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
   variable: "--font-sans",
+  display: "swap",
+  fallback: ["Hiragino Sans", "Yu Gothic", "Meiryo", "sans-serif"],
 });
 
 export const metadata: Metadata = {
-  title: '国公立専門オンライン予備校 | アウトプット特化型学習',
+  title: {
+    default: '浪人生専用オンライン予備校【受験戦略予備校】',
+    template: '%s | 浪人生専用オンライン予備校【受験戦略予備校】',
+  },
   description: '国公立大学合格を目指す浪人生専門のオンライン予備校。20年の指導経験に基づいた、あなただけの合格ロードマップをマンツーマンで構築します。授業を増やすな、自習を極めろ。',
   robots: 'index, follow',
 }

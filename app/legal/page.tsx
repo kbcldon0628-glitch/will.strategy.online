@@ -2,7 +2,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "特定商取引法に基づく表記 | 受験戦略予備校WILL",
+  title: "特定商取引法に基づく表記",
   robots: "noindex, nofollow",
 }
 
