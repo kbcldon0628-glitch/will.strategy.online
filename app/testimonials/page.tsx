@@ -1,6 +1,16 @@
 import Link from "next/link"
+import type { Metadata } from "next"
 import { allTestimonials } from "@/lib/testimonials-data"
 import { TestimonialCard } from "@/components/testimonial-card"
+import { SITE_DESCRIPTION } from "@/lib/site-config"
+
+export const metadata: Metadata = {
+  title: "合格体験記",
+  description: `合格を勝ち取った先輩の体験記を掲載。${SITE_DESCRIPTION}`,
+  alternates: {
+    canonical: "/testimonials",
+  },
+}
 
 export default function TestimonialsPage() {
   return (
