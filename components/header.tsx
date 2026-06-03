@@ -10,7 +10,6 @@ const navItems = [
   { href: "#results", label: "合格実績" },
   { href: "#testimonials", label: "合格体験記" },
   { href: "#contact", label: "お問い合わせ" },
-  { href: "#legal", label: "特定商法に基づく表記" },
 ]
 
 export function Header() {
