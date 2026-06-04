@@ -9,3 +9,5 @@ export const SITE_DESCRIPTION =
   "国公立大学合格を目指す浪人生専門のオンライン予備校。20年の指導経験に基づいた、あなただけの合格ロードマップをマンツーマンで構築します。授業を増やすな、自習を極めろ。"
 
 export const LINE_FRIEND_URL = "https://lin.ee/RzU9d0l"
+
+export const INSTAGRAM_URL = "https://www.instagram.com/will.strategy.online/"

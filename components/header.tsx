@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { InstagramLink } from "@/components/instagram-link"
 
 const navItems = [
   { href: "#greeting", label: "塾長あいさつ" },
@@ -24,29 +25,38 @@ export function Header() {
             <span className="text-[10px] sm:text-xs text-muted-foreground">浪人生専用 定員制オンライン予備校</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          <div className="flex items-center gap-4">
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-6">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <InstagramLink showLabel={false} iconClassName="w-5 h-5" />
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+
+            <InstagramLink
+              showLabel={false}
+              iconClassName="w-5 h-5"
+              className="lg:hidden"
+            />
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -63,6 +73,10 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
+              <InstagramLink
+                className="py-2"
+                onClick={() => setIsMenuOpen(false)}
+              />
             </div>
           </nav>
         )}
