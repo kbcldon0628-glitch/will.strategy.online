@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { InstagramLink } from "@/components/instagram-link"
 
 const navItems = [
+  { href: "#reasons", label: "選ばれる理由" },
   { href: "#greeting", label: "塾長あいさつ" },
   { href: "#courses", label: "コース・料金" },
   { href: "#results", label: "合格実績" },

@@ -23,7 +23,7 @@ const reasons = [
 
 export function Reasons() {
   return (
-    <section id="reasons" className="py-20 sm:py-28 bg-secondary">
+    <section id="reasons" className="scroll-mt-20 py-20 sm:py-28 bg-secondary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14 sm:mb-16">
           <span className="text-sm font-medium text-accent uppercase tracking-wider">
@@ -35,20 +35,22 @@ export function Reasons() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 md:[grid-auto-rows:1fr]">
           {reasons.map((reason) => (
             <Card
               key={reason.number}
-              className="border-border bg-card flex flex-col h-full"
+              className="h-full border-border bg-card py-0 gap-0 shadow-sm"
             >
-              <CardContent className="p-6 sm:p-8 flex flex-col flex-1 h-full">
-                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-primary text-primary-foreground text-sm font-bold mb-5 shrink-0">
-                  {reason.number}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug mb-4 min-h-[3.25rem] sm:min-h-[3.5rem]">
-                  {reason.title}
-                </h3>
-                <p className="text-sm text-foreground/80 leading-relaxed mt-auto">
+              <CardContent className="flex h-full flex-col p-7 sm:p-8">
+                <div className="mb-6 flex min-h-[7.5rem] flex-col gap-4">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                    {reason.number}
+                  </span>
+                  <h3 className="text-base font-bold leading-snug text-foreground sm:text-lg">
+                    {reason.title}
+                  </h3>
+                </div>
+                <p className="flex-1 text-sm leading-[1.85] text-foreground/80">
                   {reason.description}
                 </p>
               </CardContent>
