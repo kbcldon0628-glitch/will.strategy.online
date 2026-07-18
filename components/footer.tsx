@@ -8,7 +8,7 @@ export function Footer() {
               受験戦略予備校WILL
             </p>
             <p className="text-primary-foreground/70 text-xs mt-1">
-              浪人生専用 定員制オンライン予備校
+              浪人生専門 定員制オンライン予備校
             </p>
           </div>
           <p className="text-primary-foreground/70 text-sm">

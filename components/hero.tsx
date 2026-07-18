@@ -11,10 +11,14 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-32">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight tracking-tight mb-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight tracking-tight mb-6">
           <span className="block text-balance">授業を増やすな、</span>
           <span className="block text-balance">自習を極めろ。</span>
         </h1>
+
+        <p className="text-base sm:text-lg md:text-xl font-bold text-primary-foreground/90 leading-relaxed max-w-2xl mx-auto mb-8 text-pretty">
+          20年間・5,000人を指導した浪人生専門オンライン予備校
+        </p>
 
         <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 leading-relaxed max-w-2xl mx-auto mb-12 text-pretty">
           国公立大学合格のためのアウトプット特化予備校。

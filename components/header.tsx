@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex flex-col leading-tight">
             <span className="text-lg sm:text-xl font-bold text-primary">受験戦略予備校WILL</span>
-            <span className="text-[10px] sm:text-xs text-muted-foreground">浪人生専用 定員制オンライン予備校</span>
+            <span className="text-[10px] sm:text-xs text-muted-foreground">浪人生専門 定員制オンライン予備校</span>
           </a>
 
           <div className="flex items-center gap-4">
