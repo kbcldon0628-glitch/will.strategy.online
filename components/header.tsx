@@ -10,7 +10,6 @@ const navItems = [
   { href: "#greeting", label: "塾長あいさつ" },
   { href: "#courses", label: "コース・料金" },
   { href: "#results", label: "合格実績" },
-  { href: "#testimonials", label: "合格体験記" },
   { href: "#contact", label: "お問い合わせ" },
 ]
 

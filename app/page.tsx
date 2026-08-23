@@ -4,7 +4,6 @@ import { Reasons } from "@/components/reasons"
 import { Greeting } from "@/components/greeting"
 import { Courses } from "@/components/courses"
 import { Results } from "@/components/results"
-import { Testimonials } from "@/components/testimonials"
 import { Contact } from "@/components/contact"
 import { Legal } from "@/components/legal"
 import { Footer } from "@/components/footer"
@@ -18,7 +17,6 @@ export default function Home() {
       <Greeting />
       <Courses />
       <Results />
-      <Testimonials />
       <Contact />
       <Legal />
       <Footer />
