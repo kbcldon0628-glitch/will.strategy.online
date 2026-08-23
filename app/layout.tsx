@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@/components/google-analytics'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site-config'
 import './globals.css'
 
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="ja" className="bg-background">
       <body className={`${notoSansJP.variable} font-sans antialiased`}>
         {children}
+        {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -11,3 +11,6 @@ export const SITE_DESCRIPTION =
 export const LINE_FRIEND_URL = "https://lin.ee/RzU9d0l"
 
 export const INSTAGRAM_URL = "https://www.instagram.com/will.strategy.online/"
+
+/** Google Analytics 4 測定ID（例: G-0DP9MDDTYX） */
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
