@@ -12,5 +12,10 @@ export const LINE_FRIEND_URL = "https://lin.ee/RzU9d0l"
 
 export const INSTAGRAM_URL = "https://www.instagram.com/will.strategy.online/"
 
+/** note プロフィールURL（お役立ち記事） */
+export const NOTE_BLOG_URL =
+  process.env.NEXT_PUBLIC_NOTE_BLOG_URL ??
+  "https://note.com/will_strategy"
+
 /** Google Analytics 4 測定ID（例: G-0DP9MDDTYX） */
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID

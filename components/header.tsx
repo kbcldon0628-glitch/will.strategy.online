@@ -4,17 +4,32 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { InstagramLink } from "@/components/instagram-link"
+import { NOTE_BLOG_URL } from "@/lib/site-config"
 
-const navItems = [
+type NavItem = {
+  href: string
+  label: string
+  external?: boolean
+}
+
+const navItems: NavItem[] = [
   { href: "#reasons", label: "選ばれる理由" },
   { href: "#greeting", label: "塾長あいさつ" },
   { href: "#courses", label: "コース・料金" },
   { href: "#results", label: "合格実績" },
+  { href: NOTE_BLOG_URL, label: "お役立ち記事", external: true },
   { href: "#contact", label: "お問い合わせ" },
 ]
 
+const navLinkClassName =
+  "text-sm text-foreground/80 hover:text-primary transition-colors"
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -32,7 +47,13 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                  className={navLinkClassName}
+                  {...(item.external
+                    ? {
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }
+                    : {})}
                 >
                   {item.label}
                 </a>
@@ -67,16 +88,19 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-foreground/80 hover:text-primary transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  className={`${navLinkClassName} py-2`}
+                  onClick={handleNavClick}
+                  {...(item.external
+                    ? {
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }
+                    : {})}
                 >
                   {item.label}
                 </a>
               ))}
-              <InstagramLink
-                className="py-2"
-                onClick={() => setIsMenuOpen(false)}
-              />
+              <InstagramLink className="py-2" onClick={handleNavClick} />
             </div>
           </nav>
         )}
